@@ -1,4 +1,4 @@
-#include "shell.h"
+#include "main.h"
 
 /**
  *envron - a function that prints current environment
@@ -14,7 +14,8 @@ void envron(char **token_com __attribute__((unused)))
 		print(environ[index], STDOUT_FILENO);
 		print("\n", STDOUT_FILENO);
 	}
-}
+
+
 
 /**
  * wquit -  a command to exit the shell
