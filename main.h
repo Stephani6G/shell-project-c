@@ -5,7 +5,14 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
-#include <errno.h>
+#include <dirent.h>
+#include <limits.h>
+#include <sys/wait.h>
+#include <sys/types.h>
+#include <ctype.h>
 
+
+int main(void);
+int _putchar(char c);
 
 #endif
