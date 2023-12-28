@@ -10,6 +10,10 @@
 #include <sys/wait.h>
 #include <sys/types.h>
 #include <ctype.h>
+#include <fcntl.h>
+#include <signal.h>
+#include <stddef.h>
+#include <sys/stat.h>
 
 
 int main(void);
