@@ -9,9 +9,9 @@ void envron(char **token_com __attribute__((unused)))
 {
 	int index;
 
-	for (index = 0; environ[index] != NULL; index++)
+	for (index = 0; envron[index] != NULL; index++)
 	{
-		print(environ[index], STDOUT_FILENO);
+		print(envron[index], STDOUT_FILENO);
 		print("\n", STDOUT_FILENO);
 	}
 
