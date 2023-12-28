@@ -15,6 +15,10 @@
 #include <stddef.h>
 #include <sys/stat.h>
 
+/*prompt.c*/
+void envron(char **token_com __attribute__((unused)));
+void wquit(char **token_com);
+
 
 int main(void);
 int _putchar(char c);
