@@ -107,6 +107,8 @@ char *strcat_cd(datashel *dtsh, char *text, char *errorm, char *vr_str);
 /* err_2.c */
 char *error_fetch_cd(datashel *dtsh);
 char *error_not_found(datashel *dtsh);
+char *aux_itoa(int n);
+
 
 
 #endif
