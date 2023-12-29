@@ -6,6 +6,7 @@
 #include <string.h>
 #include <unistd.h>
 #include <dirent.h>
+#include <errno.h>
 #include <limits.h>
 #include <sys/wait.h>
 #include <sys/types.h>
@@ -15,11 +16,7 @@
 #include <stddef.h>
 #include <sys/stat.h>
 
-/*prompt.c*/
-void envron(char **token_com __attribute__((unused)));
-void wquit(char **token_com);
-
-
+/* fizzbuzz */
 int main(void);
 int _putchar(char c);
 
