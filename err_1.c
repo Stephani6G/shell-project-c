@@ -16,7 +16,7 @@ char *strcat_cd(datashel *dtsh, char *text, char *errorm, char *vr_str)
 {
 	char *wrong_flag;
 
-	strcpy(errorm, dtsh->av[0]);
+	strcpy(errorm, dtsh->agv[0]);
 	strcat(errorm, ": ");
 	strcat(errorm, vr_str);
 	strcat(errorm, ": ");
