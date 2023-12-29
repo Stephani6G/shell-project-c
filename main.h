@@ -104,4 +104,9 @@ typedef struct r_var_lists
 /* err_1.c */
 char *strcat_cd(datashel *dtsh, char *text, char *errorm, char *vr_str);
 
+/* err_2.c */
+char *error_fetch_cd(datashel *dtsh);
+char *error_not_found(datashel *dtsh);
+
+
 #endif
