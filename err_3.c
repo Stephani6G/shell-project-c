@@ -18,7 +18,7 @@ char *error_shell_exit_shell(datashel *dtsh)
 	vr_str = aux_itoa(dtsh->count);
 	len = strlen(dtsh->agv[0]) + strlen(vr_str);
 	len += strlen(dtsh->args[0]) + strlen(dtsh->args[1]) + 23;
-	error = malloc(sizeof(char) * (len + 1));
+	errorm = malloc(sizeof(char) * (len + 1));
 
 	if (errorm == 0)
 	{
