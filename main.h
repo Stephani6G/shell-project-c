@@ -27,6 +27,28 @@ int main(void);
 int _putchar(char c);
 
 /**
+ * struct datas - struct that contains
+ * all relevant data on runtime
+ * @agv: the argument vector of the commands
+ * @input: command line written by the user
+ * @args: tokens of the command line
+ * @status: last status of the shell
+ * @count: lines counter
+ * @_environ: environment variable of the shell
+ * @piid: the  process ID of the simkple shell
+ */
+typedef struct datas
+{
+	char **agv;
+	char *input;
+	char **args;
+	int status;
+	int count;
+	char **_environ;
+	char *piid;
+} datashel;
+
+/**
  * struct builtin_strruc - Builtin struct for command arguments
  * @typen:  name of the command builtin
  * @funcs: data type pointer function.
@@ -51,27 +73,6 @@ typedef struct line_list_singly
 	struct line_list_singly *next;
 } line_l;
 
-/**
- * struct datas - struct that contains
- * all relevant data on runtime
- * @agv: the argument vector of the commands 
- * @input: command line written by the user
- * @args: tokens of the command line
- * @status: last status of the shell
- * @count: lines counter
- * @_environ: environment variable of the shell 
- * @piid: the  process ID of the simkple shell
- */
-typedef struct datas
-{
-	char **agv;
-	char *input;
-	char **args;
-	int status;
-	int count;
-	char **_environ;
-	char *piid;
-} datashel;
 
 /**
  * struct sep_list - a  singly linked list
