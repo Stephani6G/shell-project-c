@@ -20,6 +20,7 @@
 #define TOK_BUFSIZE 128
 #define TOK_DELIM " \t\r\n\a"
 
+extern char **environ;
 
 /* fizzbuzz */
 int main(void);
@@ -50,6 +51,54 @@ typedef struct line_list_singly
 	struct line_list_singly *next;
 } line_l;
 
+/**
+ * struct datas - struct that contains
+ * all relevant data on runtime
+ * @agv: the argument vector of the commands 
+ * @input: command line written by the user
+ * @args: tokens of the command line
+ * @status: last status of the shell
+ * @count: lines counter
+ * @_environ: environment variable of the shell 
+ * @piid: the  process ID of the simkple shell
+ */
+typedef struct datas
+{
+	char **agv;
+	char *input;
+	char **args;
+	int status;
+	int count;
+	char **_environ;
+	char *piid;
+} datashel;
 
+/**
+ * struct sep_list - a  singly linked list
+ * @sep: ; | &
+ * @next: next node in the linked list
+ * Description: singly linked list to store separators
+ */
+typedef struct sep_list
+{
+	char sep;
+	struct sep_list *next;
+} sep_l;
+
+/**
+ * struct r_var_lists - single linked list
+ * @length_var: length of the variable
+ * @value: value of the variable
+ * @length_val: length of the value var
+ * @next: next node i as singly linked list
+ * Description: single linked list to store variables
+ */
+typedef struct r_var_lists
+{
+	int length_var;
+	char *value;
+	int length_value;
+	struct r_vasr_lists *next;
+} r_vars;
 
 #endif
