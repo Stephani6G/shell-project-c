@@ -110,5 +110,7 @@ char *error_not_found(datashel *dtsh);
 char *aux_itoa(int n);
 
 
+/* err_3.c */
+char *error_shell_exit_shell(datashel *dtsh);
 
 #endif
