@@ -42,7 +42,7 @@ char *err_env(datashel *dtsh)
  * @dtsh: data relevant
  * Return: The error string
  */
-char *path_error(data_shel *dtsh)
+char *path_error(datashel *dtsh)
 {
 	int len;
 	char *vr_str;
