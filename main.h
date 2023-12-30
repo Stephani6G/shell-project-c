@@ -112,6 +112,8 @@ char *aux_itoa(int n);
 
 /* err_3.c */
 char *error_shell_exit_shell(datashel *dtsh);
+
+/* a_err_1.c */
 char *err_env(datashel *dtsh);
 char *path_error(data_shel *dtsh);
 
