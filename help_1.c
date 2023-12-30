@@ -60,3 +60,16 @@ void help_general(void)
 	help = "unsetenv [variable]\n";
 	write(STDOUT_FILENO, help, strlen(help));
 }
+/**
+ * help_exit - Help information fot the builint exit
+ */
+void help_exit(void)
+{
+	char *help = "exit: exit [n]\n Exit shell.\n";
+
+	write(STDOUT_FILENO, help, strlen(help));
+	help = "Exits the shell with a status of N. If N is ommited, the exit";
+	write(STDOUT_FILENO, help, strlen(help));
+	help = "status is of the last command executed\n";
+	write(STDOUT_FILENO, help, strlen(help));
+}
