@@ -25,46 +25,46 @@ char *err_env(datashel *dtsh)
 		return (NULL);
 	}
 
-	_strcpy(error, dtsh->agv[0]);
-	_strcat(error, ": ");
-	_strcat(error, vr_str);
-	_strcat(error, ": ");
-	_strcat(error, dtsh->args[0]);
-	_strcat(errorm, text);
-	_strcat(errorm, "\0");
+	strcpy(errorm, dtsh->agv[0]);
+	strcat(errorm, ": ");
+	strcat(errorm, vr_str);
+	strcat(errorm, ": ");
+	strcat(errorm, dtsh->args[0]);
+	strcat(errorm, text);
+	strcat(errorm, "\0");
 	free(vr_str);
 
-	return (error);
+	return (errorm);
 }
 /**
- * error_path_126 - error message for path and failure denied permission.
- * @datash: data relevant (counter, arguments).
- *
- * Return: The error string.
+ * path_error - error message displayed for path failure
+ * and failure denied permission
+ * @dtsh: data relevant
+ * Return: The error string
  */
-char *error_path_126(data_shell *datash)
+char *path_error(data_shel *dtsh)
 {
-	int length;
-	char *ver_str;
-	char *error;
+	int len;
+	char *vr_str;
+	char *errorm;
 
-	ver_str = aux_itoa(datash->counter);
-	length = _strlen(datash->av[0]) + _strlen(ver_str);
-	length += _strlen(datash->args[0]) + 24;
-	error = malloc(sizeof(char) * (length + 1));
-	if (error == 0)
+	vr_str = aux_itoa(dtsh->count);
+	len = strlen(dtsh->agv[0]) + strlen(vr_str);
+	len += strlen(dtsh->args[0]) + 24;
+	errorm = malloc(sizeof(char) * (len + 1));
+	if (errorm == 0)
 	{
-		free(error);
-		free(ver_str);
+		free(errorm);
+		free(vr_str);
 		return (NULL);
 	}
-	_strcpy(error, datash->av[0]);
-	_strcat(error, ": ");
-	_strcat(error, ver_str);
-	_strcat(error, ": ");
-	_strcat(error, datash->args[0]);
-	_strcat(error, ": Permission denied\n");
-	_strcat(error, "\0");
-	free(ver_str);
-	return (error);
+	strcpy(errorm, dtsh->agv[0]);
+	strcat(errorm, ": ");
+	strcat(errorm, vr_str);
+	strcat(errorm, ": ");
+	strcat(errorm, dtsh->args[0]);
+	strcat(errorm, ": Permission denied\n");
+	strcat(errorm, "\0");
+	free(vr_str);
+	return (errorm);
 }
