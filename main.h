@@ -117,4 +117,11 @@ char *error_shell_exit_shell(datashel *dtsh);
 char *err_env(datashel *dtsh);
 char *path_error(datashel *dtsh);
 
+/* help_1.c */
+void help_environ(void);
+void help_setenv(void);
+void help_unsetenv(void);
+void help_general(void);
+void help_exit(void);
+
 #endif
