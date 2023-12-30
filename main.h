@@ -115,6 +115,6 @@ char *error_shell_exit_shell(datashel *dtsh);
 
 /* a_err_1.c */
 char *err_env(datashel *dtsh);
-char *path_error(data_shel *dtsh);
+char *path_error(datashel *dtsh);
 
 #endif
