@@ -21,6 +21,7 @@
 #define TOK_DELIM " \t\r\n\a"
 
 extern char **environ;
+char *aux_itoa(int n);
 
 /* fizzbuzz */
 int main(void);
