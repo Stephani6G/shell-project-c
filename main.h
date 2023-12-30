@@ -112,5 +112,7 @@ char *aux_itoa(int n);
 
 /* err_3.c */
 char *error_shell_exit_shell(datashel *dtsh);
+char *err_env(datashel *dtsh);
+char *path_error(data_shel *dtsh);
 
 #endif
