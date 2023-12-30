@@ -125,4 +125,9 @@ void help_unsetenv(void);
 void help_general(void);
 void help_exit(void);
 
+/* help-2.c */
+void help_b(void);
+void help_alias(void);
+void help_cd(void);
+
 #endif
