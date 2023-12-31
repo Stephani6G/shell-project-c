@@ -130,4 +130,12 @@ void help_b(void);
 void help_alias(void);
 void help_cd(void);
 
+/* list_1.c */
+sep_list *add_node_sep_end(sep_list **head, char seprt);
+void fre_sep_list(sep_list **head);
+line_list *line_node_end(line_list **head, char *clin);
+void free_lin_list(line_list **head);
+
+
+
 #endif
