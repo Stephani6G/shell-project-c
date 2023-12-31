@@ -131,6 +131,9 @@ void help_alias(void);
 void help_cd(void);
 
 
-
+/* memory.c */
+void _memcpy(void *newpointer, const void *pointer, unsigned int size);
+void *_realloc(void *pointer, unsigned int old_size, unsigned int new_size);
+char **_realocdp(char **pointer, unsigned int old_size, unsigned int new_size);
 
 #endif
