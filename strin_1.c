@@ -73,11 +73,11 @@ char _str_chr(char *str, char c)
 {
 	unsigned int index = 0;
 
-	for (; *(s + index) != '\0'; index++)
-		if (*(s + index) == c)
-			return (s + index);
-	if (*(s + index) == c)
-		return (s + index);
+	for (; *(str + index) != '\0'; index++)
+		if (*(str + index) == c)
+			return (str + index);
+	if (*(str + index) == c)
+		return (str + index);
 	return ('\0');
 }
 /**
@@ -90,12 +90,12 @@ int _str_spn(char *str, char *accept)
 {
 	int index, j, bool;
 
-	for (index = 0; *(s + index) != '\0'; index++)
+	for (index = 0; *(str + index) != '\0'; index++)
 	{
 		bool = 1;
 		for (j = 0; *(accept + j) != '\0'; j++)
 		{
-			if (*(s + index) == *(accept + j))
+			if (*(str + index) == *(accept + j))
 			{
 				bool = 0;
 				break;
