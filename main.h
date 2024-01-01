@@ -141,10 +141,11 @@ char *aux_itoa(int n);
 int _atoi(char *str);
 
 /* strin_1.c */
-char _str_cat(char *dest, const char *src);
-char _str_cpy(char *dest, char *src);
-int _str_cmp(char *s1, char *s2);
-char _str_chr(char *str, char c);
-int _str_spn(char *str, char *accept);
+char *_str_cat(char *dest, const char *src);
+int *_str_cmp(char *s1, char *s2);
+char *_str_chr(char *str, char c);
+int *_str_spn(char *str, char *accept);
+
+
 
 #endif
