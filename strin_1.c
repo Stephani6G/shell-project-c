@@ -44,13 +44,13 @@ char *_str_cpy(char *dest, char *src)
 	return (dest);
 }
 /**
- * *_str_cmp - Function that compares two strings
+ * _str_cmp - Function that compares two strings
  * @s1: first typestring to be compared
  * @s2: second type string to be compared
  * Return: successs
  */
 
-int *_str_cmp(char *s1, char *s2)
+int _str_cmp(char *s1, char *s2)
 {
 	int index;
 
@@ -81,12 +81,12 @@ char *_str_chr(char *str, char c)
 	return ('\0');
 }
 /**
- * *_str_spn - gets the length of a prefix substring
+ * _str_spn - gets the length of a prefix substring
  * @str: initial segment
  * @accept: accepted bytes
  * Return: the number of accepted bytes
  */
-int *_str_spn(char *str, char *accept)
+int _str_spn(char *str, char *accept)
 {
 	int index, j, bool;
 
