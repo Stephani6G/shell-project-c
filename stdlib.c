@@ -79,7 +79,7 @@ int _atoi(char *str)
 		if (*(str + count) == '-')
 			p *= -1;
 
-		if ((*(str + count) >= '0') && (*(s + count) <= '9'))
+		if ((*(str + count) >= '0') && (*(str + count) <= '9'))
 		{
 			if (size > 0)
 				m *= 10;
