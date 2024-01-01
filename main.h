@@ -159,5 +159,6 @@ int _is_digit(const char *str);
 /* stri_4. c */
 void rev_string(char *str);
 
+int cd_shel(datashel *dtsh);
 
 #endif
