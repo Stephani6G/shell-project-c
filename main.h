@@ -147,5 +147,10 @@ char *_str_chr(char *str, char c);
 int _str_spn(char *str, char *accept);
 
 
+/* strin_2.c */
+char *_str_dup(const char *str);
+int _str_len(const char *str);
+int cmpr_char(char str[], const char *dlm);
+
 
 #endif
