@@ -153,4 +153,7 @@ int _str_len(const char *str);
 int cmpr_char(char str[], const char *dlm);
 
 
+char *_str_tok(char str[], const char *dlm);
+int _is_digit(const char *str);
+
 #endif
