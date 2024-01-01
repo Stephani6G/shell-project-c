@@ -6,7 +6,7 @@
  * @src: const char pointer the source of str
  * Return: the dest
  */
-char *strcat(char *dest, const char *src)
+char strcat(char *dest, const char *src)
 {
 	int index;
 	int j;
@@ -69,7 +69,7 @@ int strcmp(char *s1, char *s2)
  * @c: character
  * Return: the pointer to the first occurrence of the character c
  */
-char *strchr(char *str, char c)
+char strchr(char *str, char c)
 {
 	unsigned int index = 0;
 
