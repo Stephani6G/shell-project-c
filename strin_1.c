@@ -47,7 +47,9 @@ char strcpy(char *dest, char *src)
  * strcmp - Function that compares two strings
  * @s1: first typestring to be compared
  * @s2: second type string to be compared
+ * Return: successs
  */
+
 int strcmp(char *s1, char *s2)
 {
 	int index;
