@@ -56,7 +56,7 @@ int _is_digit(const char *str)
 {
 	unsigned int i;
 
-	for (i = 0; s[i]; i++)
+	for (i = 0; str[i]; i++)
 	{
 		if (str[i] < 48 || str[i] > 57)
 			return (0);
