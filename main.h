@@ -156,4 +156,8 @@ int cmpr_char(char str[], const char *dlm);
 char *_str_tok(char str[], const char *dlm);
 int _is_digit(const char *str);
 
+/* stri_4. c */
+void rev_string(char *str);
+
+
 #endif
