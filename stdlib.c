@@ -90,7 +90,7 @@ int _atoi(char *str)
 
 	for (i = count - size; i < count; i++)
 	{
-		o = o + ((*(s + i) - 48) * m);
+		o = o + ((*(str + i) - 48) * m);
 		m /= 10;
 	}
 	return (o * p);
