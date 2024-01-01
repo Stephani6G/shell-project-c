@@ -140,5 +140,12 @@ int get_length(int n);
 char *aux_itoa(int n);
 int _atoi(char *str);
 
+/* strin_1.c */
+char strcat(char *dest, const char *src);
+char strcpy(char *dest, char *src);
+int strcmp(char *s1, char *s2);
+char strchr(char *str, char c);
+int strspn(char *str, char *accept);
+
 
 #endif
