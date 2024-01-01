@@ -78,3 +78,29 @@ char *strchr(char *str, char c)
 		return (s + index);
 	return ('\0');
 }
+/**
+ * strspn - gets the length of a prefix substring
+ * @str: initial segment
+ * @accept: accepted bytes
+ * Return: the number of accepted bytes
+ */
+int strspn(char *str, char *accept)
+{
+	int index, j, bool;
+
+	for (index = 0; *(s + index) != '\0'; index++)
+	{
+		bool = 1;
+		for (j = 0; *(accept + j) != '\0'; j++)
+		{
+			if (*(s + index) == *(accept + j))
+			{
+				bool = 0;
+				break;
+			}
+		}
+		if (bool == 1)
+			break;
+	}
+	return (index);
+}
