@@ -34,12 +34,12 @@ char *_where_com(char *cmd, char **_environ)
 	int len_dir, len_cmd, i;
 	struct stat st;
 
-	path = _getenv("PATH", _environ);
+	path = getenv("PATH", _environ);
 	if (path)
 	{
-		ptr_path = _strdup(path);
-		len_cmd = _strlen(cmd);
-		token_path = _strtok(ptr_path, ":");
+		ptr_path = _str_dup(path);
+		len_cmd = _str_len(cmd);
+		token_path = _str_tok(ptr_path, ":");
 		i = 0;
 		while (token_path != NULL)
 		{
@@ -48,17 +48,17 @@ char *_where_com(char *cmd, char **_environ)
 					return (cmd);
 			len_dir = _strlen(token_path);
 			dir = malloc(len_dir + len_cmd + 2);
-			_strcpy(dir, token_path);
-			_strcat(dir, "/");
-			_strcat(dir, cmd);
-			_strcat(dir, "\0");
+			_str_spn(dir, token_path);
+			_str_cat(dir, "/");
+			_str_cat(dir, cmd);
+			_str_cat(dir, "\0");
 			if (stat(dir, &st) == 0)
 			{
 				free(ptr_path);
 				return (dir);
 			}
 			free(dir);
-			token_path = _strtok(NULL, ":");
+			token_path = _str_tok(NULL, ":");
 		}
 		free(ptr_path);
 		if (stat(cmd, &st) == 0)
@@ -110,7 +110,7 @@ int is_exec(datashel *dtsh)
 	{
 		return (i);
 	}
-	get_error(dtsh, 127);
+	path_error(dtsh, 127);
 	return (-1);
 }
 
@@ -124,15 +124,16 @@ int check_err_perm(char *dir, datashel *dtsh)
 {
 	if (dir == NULL)
 	{
-		get_error(dtsh, 127);
+		path_error(dtsh, 127);
 		return (1);
 	}
 
-	if (_strcmp(dtsh->args[0], dir) != 0)
+	if (_str_cmp(dtsh->args[0], dir) != 0)
+	
 	{
 		if (access(dir, X_OK) == -1)
 		{
-			get_error(dtsh, 126);
+			path_error(dtsh, 126);
 			free(dir);
 			return (1);
 		}
@@ -142,7 +143,7 @@ int check_err_perm(char *dir, datashel *dtsh)
 	{
 		if (access(dtsh->args[0], X_OK) == -1)
 		{
-			get_error(dtsh, 126);
+			path_error(dtsh, 126);
 			return (1);
 		}
 	}
@@ -169,7 +170,7 @@ int cmd_exec(datashel *dtsh)
 	if (exec == 0)
 	{
 		dir = _which(dtsh->args[0], dtsh->_environ);
-		if (check_error_cmd(dir, dtsh) == 1)
+		if (check_err_perm(dir, dtsh) == 1)
 			return (1);
 	}
 
@@ -184,7 +185,7 @@ int cmd_exec(datashel *dtsh)
 	}
 	else if (pd < 0)
 	{
-		perror(dtsh->av[0]);
+		perror(dtsh->agv[0]);
 		return (1);
 	}
 	else
