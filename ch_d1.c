@@ -11,12 +11,12 @@ void cd_dot(datashel *dtsh)
 	char *dir, *cp_pwd, *cp_strtok_pwd;
 
 	getcwd(pwd, sizeof(pwd));
-	cp_pwd = _strdup(pwd);
-	set_env("OLDPWD", cp_pwd, dtsh);
+	cp_pwd = _strd_up(pwd);
+	setenv("OLDPWD", cp_pwd, dtsh);
 	dir = dtsh->args[1];
-	if (_strcmp(".", dir) == 0)
+	if (_str_cmp(".", dir) == 0)
 	{
-		set_env("PWD", cp_pwd, dtsh);
+		setenv("PWD", cp_pwd, dtsh);
 		free(cp_pwd);
 		return;
 	}
@@ -27,7 +27,7 @@ void cd_dot(datashel *dtsh)
 	}
 	cp_strtok_pwd = cp_pwd;
 	rev_string(cp_strtok_pwd);
-	cp_strtok_pwd = _strtok(cp_strtok_pwd, "/");
+	cp_strtok_pwd = _str_tok(cp_strtok_pwd, "/");
 	if (cp_strtok_pwd != NULL)
 	{
 		cp_strtok_pwd = _strtok(NULL, "\0");
