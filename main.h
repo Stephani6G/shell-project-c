@@ -167,5 +167,11 @@ int find_first_char(char *inputs, int *index);
 void print_syntx_err(datashel *dtsh, char *inputs, int index, int bool);
 int check_syntx_err(datashel *dtsh, char *inputs);
 
+/*cd_1d1.c */
+void cd_dot(datashel *dtsh);
+void cd_to(datashel *dtsh);
+void cd_previous(datashel *dtsh);
+void cd_to_home(datashel *dtsh);
+
 
 #endif
