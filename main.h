@@ -174,4 +174,12 @@ void cd_previous(datashel *dtsh);
 void cd_to_home(datashel *dtsh);
 
 
+/* exec.c */
+int is_direc(char *path, int *index);
+char *_where_com(char *cmd, char **_environ);
+int is_exec(datashel *dtsh);
+int check_err_perm(char *dir, datashel *dtsh);
+int cmd_exec(datashel *dtsh);
+
+
 #endif
