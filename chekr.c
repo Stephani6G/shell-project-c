@@ -55,7 +55,7 @@ int err_sep(char *inputs, int index, char last)
 
 		if (last == '&')
 		{
-			count = repeat_chars(input, 0);
+			count = repeat_chars(inputs, 0);
 			if (count == 0 || count > 1)
 				return (index);
 		}
@@ -116,7 +116,7 @@ void print_syntx_err(datashel *dtsh, char *inputs, int index, int bool)
 
 	msg2 = ": Syntax error: \"";
 	msg3 = "\" unexpected\n";
-	counter = aux_itoa(dtsh->counter);
+	counter = aux_itoa(dtsh->count);
 	length = strlen(dtsh->agv[0]) + strlen(counter);
 	length += strlen(msg) + strlen(msg2) + strlen(msg3) + 2;
 
@@ -151,7 +151,7 @@ int check_syntx_err(datashel *dtsh, char *inputs)
 	int f_char = 0;
 	int i = 0;
 
-	f_char = first_char(inputs, &begin);
+	f_char = find_first_char(inputs, &begin);
 	if (f_char == -1)
 	{
 		print_syntx_err(dtsh, inputs, begin, 0);
