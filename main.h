@@ -160,5 +160,12 @@ int _is_digit(const char *str);
 void rev_string(char *str);
 
 int cd_shel(datashel *dtsh);
+/* chekr.c */
+int repeat_chars(char *inputs, int index);
+int err_sep(char *inputs, int index, char last);
+int find_first_char(char *inputs, int *index);
+void print_syntx_err(datashel *dtsh, char *inputs, int index, int bool);
+int check_syntx_err(datashel *dtsh, char *inputs);
+
 
 #endif
