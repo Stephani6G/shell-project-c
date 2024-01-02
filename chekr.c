@@ -158,7 +158,7 @@ int check_syntx_err(datashel *dtsh, char *inputs)
 		return (1);
 	}
 
-	i = error_sep(inputs + begin, 0, *(inputs + begin));
+	i = err_sep(inputs + begin, 0, *(inputs + begin));
 	if (i != 0)
 	{
 		print_syntx_err(dtsh, inputs, begin + i, 1);
