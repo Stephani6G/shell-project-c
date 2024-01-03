@@ -11,16 +11,16 @@ void cd_dot(datashel *dtsh)
 	char *dir, *cp_pwd, *cp_strtok_pwd;
 
 	getcwd(pwd, sizeof(pwd));
-	cp_pwd = _strd_up(pwd);
-	setenv("OLDPWD", cp_pwd, dtsh);
+	cp_pwd = _str_dup(pwd);
+	setenv("OLDPWD", cp_pwd, datashel);
 	dir = dtsh->args[1];
 	if (_str_cmp(".", dir) == 0)
 	{
-		setenv("PWD", cp_pwd, dtsh);
+		setenv("PWD", cp_pwd, datashel);
 		free(cp_pwd);
 		return;
 	}
-	if (_strcmp("/", cp_pwd) == 0)
+	if (_str_cmp("/", cp_pwd) == 0)
 	{
 		free(cp_pwd);
 		return;
@@ -30,7 +30,7 @@ void cd_dot(datashel *dtsh)
 	cp_strtok_pwd = _str_tok(cp_strtok_pwd, "/");
 	if (cp_strtok_pwd != NULL)
 	{
-		cp_strtok_pwd = _strtok(NULL, "\0");
+		cp_strtok_pwd = _str_tok(NULL, "\0");
 
 		if (cp_strtok_pwd != NULL)
 			rev_string(cp_strtok_pwd);
@@ -38,7 +38,7 @@ void cd_dot(datashel *dtsh)
 	if (cp_strtok_pwd != NULL)
 	{
 		chdir(cp_strtok_pwd);
-		set_env("PWD", cp_strtok_pwd, dtsh);
+		setenv("PWD", cp_strtok_pwd, dtsh);
 	}
 	else
 	{
@@ -65,11 +65,11 @@ void cd_to(datashel *dtsh)
 	dir = dtsh->args[1];
 	if (chdir(dir) == -1)
 	{
-		get_error(dtsh, 2);
+		path_error(dtsh, 2);
 		return;
 	}
 
-	cp_pwd = _strdup(pwd);
+	cp_pwd = _str_dup(pwd);
 	set_env("OLDPWD", cp_pwd, dtsh);
 
 	cp_dir = _strdup(dir);
@@ -95,7 +95,7 @@ void cd_previous(datashel *dtsh)
 	getcwd(pwd, sizeof(pwd));
 	cp_pwd = _strdup(pwd);
 
-	p_oldpwd = _getenv("OLDPWD", dtsh->_environ);
+	p_oldpwd = getenv("OLDPWD", dtsh->_environ);
 
 	if (p_oldpwd == NULL)
 		cp_oldpwd = cp_pwd;
@@ -111,7 +111,7 @@ void cd_previous(datashel *dtsh)
 
 	p_pwd = _getenv("PWD", dtsh->_environ);
 
-	write(STDOUT_FILENO, p_pwd, _strlen(p_pwd));
+	write(STDOUT_FILENO, p_pwd, _str_len(p_pwd));
 	write(STDOUT_FILENO, "\n", 1);
 
 	free(cp_pwd);
