@@ -186,4 +186,9 @@ char **split_line(char *inputs);
 /* l1st.c*/
 sep_l *add_sep_node_end(sep_l **head, char sept);
 
+/* l2st.c*/
+void free_sep_list(sep_l **head);
+line_l *add_line_node_end(line_l **head, char *line);
+void free_line_list(line_l **head);
+
 #endif
