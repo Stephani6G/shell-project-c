@@ -20,16 +20,16 @@ void go_to_next(sep_l **list_s, line_l **list_l, datashel *dtsh)
 	{
 		if (dtsh->status == 0)
 		{
-			if (ls_s->separator == '&' || ls_s->separator == ';')
+			if (ls_s->sep == '&' || ls_s->sep == ';')
 				loop_sep = 0;
-			if (ls_s->separator == '|')
+			if (ls_s->sep == '|')
 				ls_l = ls_l->next, ls_s = ls_s->next;
 		}
 		else
 		{
-			if (ls_s->separator == '|' || ls_s->separator == ';')
+			if (ls_s->sep == '|' || ls_s->sep == ';')
 				loop_sep = 0;
-			if (ls_s->separator == '&')
+			if (ls_s->sep == '&')
 				ls_l = ls_l->next, ls_s = ls_s->next;
 		}
 		if (ls_s != NULL && !loop_sep)
