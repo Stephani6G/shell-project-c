@@ -174,5 +174,7 @@ char *swapd_chars(char *inputs, int bool);
 void addnode(sep_l **head_s, line_l **head_l, char *inputs);
 
 
+/* sl3t.c */
+void go_to_next(sep_list **list_s, line_list **list_l, datashel *dtsh);
 
 #endif
