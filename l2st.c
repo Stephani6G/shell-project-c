@@ -26,10 +26,10 @@ void free_sep_list(sep_l **head)
  * add_line_node_end - adds a command line at the end
  * of a line_list
  * @head: head of the linked list
- * @line: command line
+ * @lineui: command line
  * Return: address of the head
  */
-line_l *add_line_node_end(line_l **head, char *line)
+line_l *add_line_node_end(line_l **head, char *lineui)
 {
 	line_l *new, *temp;
 
