@@ -26,9 +26,9 @@ void addnode(sep_l **head_s, line_l **head_l, char *inputs)
 		}
 	}
 
-	line = _strtok(inputs, ";|&");
+	line = _str_tok(inputs, ";|&");
 	do {
-		line = swap_char(line, 1);
+		line = swapd_chars(line, 1);
 		add_line_node_end(head_l, line);
 		line = _strtok(NULL, ";|&");
 	} while (line != NULL);
