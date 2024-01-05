@@ -167,19 +167,8 @@ int find_first_char(char *inputs, int *index);
 void print_syntx_err(datashel *dtsh, char *inputs, int index, int bool);
 int check_syntx_err(datashel *dtsh, char *inputs);
 
-/*cd_1d1.c */
-void cd_dot(datashel *dtsh);
-void cd_to(datashel *dtsh);
-void cd_previous(datashel *dtsh);
-void cd_to_home(datashel *dtsh);
-
-
-/* exec.c */
-int is_direc(char *path, int *index);
-char *_where_com(char *cmd, char **_environ);
-int is_exec(datashel *dtsh);
-int check_err_perm(char *dir, datashel *dtsh);
-int cmd_exec(datashel *dtsh);
+/*sl1t.c */
+char *swapd_chars(char *inputs, int bool);
 
 
 #endif
