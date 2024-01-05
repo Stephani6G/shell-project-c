@@ -183,4 +183,7 @@ int split_coms(datashel *dtsh, char *inputs);
 /* sl5t.c */
 char **split_line(char *inputs);
 
+/* l1st.c*/
+sep_l *add_sep_node_end(sep_l **head, char sept);
+
 #endif
