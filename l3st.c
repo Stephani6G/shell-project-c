@@ -9,9 +9,9 @@
  * @lval: length of the value
  * Return: address of the head
  */
-r_var *add_var_nodes(r_var **head, int lvar, char *val, int lval)
+r_vars *add_var_nodes(r_vars **head, int lvar, char *val, int lval)
 {
-	r_var *new, *temp;
+	r_vars *new, *temp;
 
 	new = malloc(sizeof(r_var));
 	if (new == NULL)
