@@ -191,4 +191,8 @@ void free_sep_list(sep_l **head);
 line_l *add_line_node_end(line_l **head, char *line);
 void free_line_list(line_l **head);
 
+/* l3st.c */
+r_var *add_var_nodes(r_var **head, int lvar, char *val, int lval);
+
+
 #endif
