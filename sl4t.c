@@ -17,16 +17,16 @@ int split_coms(datashel *dtsh, char *inputs)
 	head_s = NULL;
 	head_l = NULL;
 
-	add_nodes(&head_s, &head_l, inputs);
+	addnode(&head_s, &head_l, inputs);
 
 	list_s = head_s;
 	list_l = head_l;
 
 	while (list_l != NULL)
 	{
-		dtsh->input = list_l->line;
-		dtsh->args = split_line(dtsh->inputs);
-		loop = exec_line(dtsh);
+		dtsh->input = list_l->lineui;
+		dtsh->args = split_line(dtsh->input);
+		loop = execle(dtsh);
 		free(dtsh->args);
 
 		if (loop == 0)
