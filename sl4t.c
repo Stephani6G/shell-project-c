@@ -26,7 +26,7 @@ int split_coms(datashel *dtsh, char *inputs)
 	{
 		dtsh->input = list_l->lineui;
 		dtsh->args = split_line(dtsh->input);
-		loop = execle(dtsh);
+		loop = execle(datashel);
 		free(dtsh->args);
 
 		if (loop == 0)
