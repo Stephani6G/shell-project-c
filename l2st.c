@@ -37,7 +37,7 @@ line_l *add_line_node_end(line_l **head, char *line)
 	if (new == NULL)
 		return (NULL);
 
-	new->line = line;
+	new->line = lineui;
 	new->next = NULL;
 	temp = *head;
 
