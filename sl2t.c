@@ -30,7 +30,7 @@ void addnode(sep_l **head_s, line_l **head_l, char *inputs)
 	do {
 		line = swapd_chars(line, 1);
 		add_line_node_end(head_l, line);
-		line = _strtok(NULL, ";|&");
+		line = _str_tok(NULL, ";|&");
 	} while (line != NULL);
 
 }
