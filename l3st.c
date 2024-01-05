@@ -13,13 +13,13 @@ r_vars *add_var_nodes(r_vars **head, int lvar, char *val, int lval)
 {
 	r_vars *new, *temp;
 
-	new = malloc(sizeof(r_var));
+	new = malloc(sizeof(r_vars));
 	if (new == NULL)
 		return (NULL);
 
 	new->len_var = lvar;
-	new->val = val;
-	new->len_val = lval;
+	new->value = val;
+	new->length_var = lval;
 
 	new->next = NULL;
 	temp = *head;
