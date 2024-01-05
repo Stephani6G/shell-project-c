@@ -6,11 +6,11 @@
  * @list_l: command line list
  * @dtsh: data structure
  */
-void go_to_next(sep_list **list_s, line_list **list_l, datashel *dtsh)
+void go_to_next(sep_l **list_s, line_l **list_l, datashel *dtsh)
 {
 	int loop_sep;
-	sep_list *ls_s;
-	line_list *ls_l;
+	sep_l *ls_s;
+	line_l *ls_l;
 
 	loop_sep = 1;
 	ls_s = *list_s;
