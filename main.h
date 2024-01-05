@@ -170,5 +170,7 @@ int check_syntx_err(datashel *dtsh, char *inputs);
 /*sl1t.c */
 char *swapd_chars(char *inputs, int bool);
 
+/* sl2t.c */
+void addnode(sep_l **head_s, line_l **head_l, char *inputs);
 
 #endif
