@@ -17,7 +17,7 @@ r_vars *add_var_nodes(r_vars **head, int lvar, char *val, int lval)
 	if (new == NULL)
 		return (NULL);
 
-	new->len_var = lvar;
+	new->length_var = lvar;
 	new->value = val;
 	new->length_var = lval;
 
