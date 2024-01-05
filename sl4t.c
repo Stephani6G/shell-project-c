@@ -38,8 +38,8 @@ int split_coms(datashel *dtsh, char *inputs)
 			list_l = list_l->next;
 	}
 
-	free_sep_l(&head_s);
-	free_line_l(&head_l);
+	free_sep_list(&head_s);
+	free_line_list(&head_l);
 
 	if (loop == 0)
 		return (0);
