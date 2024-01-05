@@ -174,10 +174,5 @@ char *swapd_chars(char *inputs, int bool);
 void addnode(sep_l **head_s, line_l **head_l, char *inputs);
 
 
-/* list2.c*/
-line_list *add_line_node_end(line_list **head, char *line);
-
-/*list.c*/
-sep_list *add_sep_node_end(sep_list **head, char sep);
 
 #endif
