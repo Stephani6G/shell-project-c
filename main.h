@@ -180,4 +180,7 @@ void go_to_next(sep_l **list_s, line_l **list_l, datashel *dtsh);
 /* sl4t.c */
 int split_coms(datashel *dtsh, char *inputs);
 
+/* sl5t.c */
+char **split_line(char *inputs);
+
 #endif

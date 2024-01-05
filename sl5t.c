@@ -20,7 +20,7 @@ char **split_line(char *inputs)
 		exit(EXIT_FAILURE);
 	}
 
-	token = _str_tok(input, TOK_DELIM);
+	token = _str_tok(inputs, TOK_DELIM);
 	tokens[0] = token;
 
 	for (i = 1; token != NULL; i++)
@@ -28,14 +28,14 @@ char **split_line(char *inputs)
 		if (i == bsize)
 		{
 			bsize += TOK_BUFSIZE;
-			tokens = _reallocdp(tokens, i, sizeof(char *) * bsize);
+			tokens = _realocdp(tokens, i, sizeof(char *) * bsize);
 			if (tokens == NULL)
 			{
 				write(STDERR_FILENO, ": allocation error\n", 18);
 				exit(EXIT_FAILURE);
 			}
 		}
-		token = _strtok(NULL, TOK_DELIM);
+		token = _str_tok(NULL, TOK_DELIM);
 		tokens[i] = token;
 	}
 
