@@ -177,4 +177,7 @@ void addnode(sep_l **head_s, line_l **head_l, char *inputs);
 /* sl3t.c */
 void go_to_next(sep_l **list_s, line_l **list_l, datashel *dtsh);
 
+/* sl4t.c */
+int split_coms(datashel *dtsh, char *inputs);
+
 #endif
