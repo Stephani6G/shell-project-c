@@ -100,7 +100,7 @@ typedef struct r_var_lists
 	int length_var;
 	char *value;
 	int length_value;
-	struct r_vasr_lists *next;
+	struct r_vars_lists *next;
 } r_vars;
 /* err_1.c */
 char *strcat_cd(datashel *dtsh, char *text, char *errorm, char *vr_str);
