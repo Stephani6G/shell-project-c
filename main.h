@@ -194,4 +194,7 @@ void free_line_list(line_l **head);
 /* l3st.c */
 r_vars *add_var_nodes(r_vars **head, int lvar, char *val, int lval);
 
+/* l4st.h */
+void free_rvar_list(r_var **head);
+
 #endif
