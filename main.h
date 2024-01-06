@@ -206,5 +206,7 @@ void check_env(r_vars **h, char *in, datashel *data);
 int check_vars(r_vars **h, char *in, char *st, datashel *data);
 /* var2env */
 char *replace_input(r_vars **head, char *inputs, char *new_input, int nlen);
+char *rep_var(char *inputs, datashel *dtsh);
+
 
 #endif
