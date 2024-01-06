@@ -19,7 +19,7 @@ void check_env(r_vars **h, char *in, datashel *data)
 			if (_envr[row][chr] == '=')
 			{
 				lval = _str_len(_envr[row] + chr + 1);
-				add_rvar_node(h, j, _envr[row] + chr + 1, lval);
+				add_rvar_nodes(h, j, _envr[row] + chr + 1, lval);
 				return;
 			}
 
@@ -36,5 +36,5 @@ void check_env(r_vars **h, char *in, datashel *data)
 			break;
 	}
 
-	add_rvar_node(h, j, NULL, 0);
+	add_rvar_nodes(h, j, NULL, 0);
 }
