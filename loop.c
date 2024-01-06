@@ -46,9 +46,10 @@ void shell_looped(datashel *dtsh)
 	while (loop == 1)
 	{
 		write(STDIN_FILENO, "^-^ ", 4);
-		inputs = read_line(&i_eof);
+		inputs = read_link(&i_eof);
 		if (i_eof != -1)
-			inputs = remove_comment(input);
+		{
+			inputs = remove_comment(inputs);
 			if (inputs == NULL)
 				continue;
 
@@ -60,7 +61,7 @@ void shell_looped(datashel *dtsh)
 			}
 			inputs = rep_var(inputs, dtsh);
 			loop = split_coms(dtsh, inputs);
-			dtsh->counter += 1;
+			dtsh->count += 1;
 			free(inputs);
 		}
 		else
