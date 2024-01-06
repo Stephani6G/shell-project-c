@@ -51,7 +51,7 @@ int check_vars(r_vars **h, char *in, char *st, datashel *data)
 	int i, lst, lpd;
 
 	lst = _str_len(st);
-	lpd = _str_len(data->pid);
+	lpd = _str_len(data->piid);
 
 	for (i = 0; in[i]; i++)
 	{
@@ -60,7 +60,7 @@ int check_vars(r_vars **h, char *in, char *st, datashel *data)
 			if (in[i + 1] == '?')
 				add_var_nodes(h, 2, st, lst), i++;
 			else if (in[i + 1] == '$')
-				add_var_nodes(h, 2, data->pid, lpd), i++;
+				add_var_nodes(h, 2, data->piid, lpd), i++;
 			else if (in[i + 1] == '\n')
 				add_var_nodes(h, 0, NULL, 0);
 			else if (in[i + 1] == '\0')
