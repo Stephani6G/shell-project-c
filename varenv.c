@@ -6,7 +6,7 @@
  * @in: input string
  * @data: data structure
  */
-void check_env(r_var **h, char *in, datashel *data)
+void check_env(r_vars **h, char *in, datashel *data)
 {
 	int row, chr, j, lval;
 	char **_envr;
