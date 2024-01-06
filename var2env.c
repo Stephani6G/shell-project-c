@@ -50,3 +50,49 @@ char *replace_input(r_vars **head, char *inputs, char *new_input, int nlen)
 
 	return (new_input);
 }
+
+/**
+ * rep_var - calls functions to replace string into variables
+ * @inputs: input string
+ * @dtsh: data structure
+ * Return: replaced string
+ */
+char *rep_var(char *inputs, datashel *dtsh)
+{
+	r_vars *head, *indx;
+	char *status, *new_input;
+	int olen, nlen;
+
+	status = aux_itoa(dtsh->status);
+	head = NULL;
+
+	olen = check_vars(&head, inputs, status, dtsh);
+
+	if (head == NULL)
+	{
+		free(status);
+		return (inputs);
+	}
+
+	indx = head;
+	nlen = 0;
+
+	while (indx != NULL)
+	{
+		nlen += (indx->length_var - indx->length_var);
+		indx = indx->next;
+	}
+
+	nlen += olen;
+
+	new_input = malloc(sizeof(char) * (nlen + 1));
+	new_input[nlen] = '\0';
+
+	new_input = replace_input(&head, inputs, new_input, nlen);
+
+	free(input);
+	free(status);
+	free_rvars_list(&head);
+
+	return (new_input);
+}
