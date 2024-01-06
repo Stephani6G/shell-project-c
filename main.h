@@ -201,4 +201,8 @@ void free_rvar_list(r_vars **head);
 char *remove_comment(char *in);
 void shell_looped(datashel *dtsh);
 
+/* varenv */
+void check_env(r_vars **h, char *in, datashel *data);
+int check_vars(r_vars **h, char *in, char *st, datashel *data);
+
 #endif
