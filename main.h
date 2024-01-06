@@ -208,5 +208,6 @@ int check_vars(r_vars **h, char *in, char *st, datashel *data);
 char *replace_input(r_vars **head, char *inputs, char *new_input, int nlen);
 char *rep_var(char *inputs, datashel *dtsh);
 
+char *readlink(int *i_eof);
 
 #endif
