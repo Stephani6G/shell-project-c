@@ -90,9 +90,9 @@ char *rep_var(char *inputs, datashel *dtsh)
 
 	new_input = replace_input(&head, inputs, new_input, nlen);
 
-	free(input);
+	free(inputs);
 	free(status);
-	free_rvars_list(&head);
+	free_rvar_list(&head);
 
 	return (new_input);
 }
