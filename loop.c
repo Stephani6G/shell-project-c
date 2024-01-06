@@ -33,3 +33,40 @@ char *remove_comment(char *in)
 
 	return (in);
 }
+/**
+ * shell_looped - func that loops  a shell
+ * @dtsh: data relevant
+ */
+void shell_looped(datashel *dtsh)
+{
+	int loop, i_eof;
+	char *inputs;
+
+	loop = 1;
+	while (loop == 1)
+	{
+		write(STDIN_FILENO, "^-^ ", 4);
+		inputs = read_line(&i_eof);
+		if (i_eof != -1)
+			inputs = remove_comment(input);
+			if (inputs == NULL)
+				continue;
+
+			if (check_syntx_err(dtsh, inputs) == 1)
+			{
+				dtsh->status = 2;
+				free(inputs);
+				continue;
+			}
+			inputs = rep_var(inputs, dtsh);
+			loop = split_coms(dtsh, inputs);
+			dtsh->counter += 1;
+			free(inputs);
+		}
+		else
+		{
+			loop = 0;
+			free(inputs);
+		}
+	}
+}
