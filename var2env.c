@@ -18,25 +18,25 @@ char *replace_input(r_vars **head, char *inputs, char *new_input, int nlen)
 	{
 		if (inputs[j] == '$')
 		{
-			if (!(indx->len_var) && !(indx->len_val))
+			if (!(indx->length_var) && !(indx->length_var))
 			{
 				new_input[i] = inputs[j];
 				j++;
 			}
-			else if (indx->len_var && !(indx->len_val))
+			else if (indx->length_var && !(indx->length_var))
 			{
-				for (k = 0; k < indx->len_var; k++)
+				for (k = 0; k < indx->length_var; k++)
 					j++;
 				i--;
 			}
 			else
 			{
-				for (k = 0; k < indx->len_val; k++)
+				for (k = 0; k < indx->length_var; k++)
 				{
-					new_input[i] = indx->val[k];
+					new_input[i] = indx->value[k];
 					i++;
 				}
-				j += (indx->len_var);
+				j += (indx->length_var);
 				i--;
 			}
 			indx = indx->next;
