@@ -197,4 +197,7 @@ r_vars *add_var_nodes(r_vars **head, int lvar, char *val, int lval);
 /* l4st.h */
 void free_rvar_list(r_vars **head);
 
+/* loop.c */
+char *remove_comment(char *in);
+
 #endif
