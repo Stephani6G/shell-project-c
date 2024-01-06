@@ -46,7 +46,7 @@ void shell_looped(datashel *dtsh)
 	while (loop == 1)
 	{
 		write(STDIN_FILENO, "^-^ ", 4);
-		inputs = read_link(&i_eof);
+		inputs = readlink(&i_eof);
 		if (i_eof != -1)
 		{
 			inputs = remove_comment(inputs);
