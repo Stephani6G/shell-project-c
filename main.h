@@ -199,5 +199,6 @@ void free_rvar_list(r_vars **head);
 
 /* loop.c */
 char *remove_comment(char *in);
+void shell_looped(datashel *dtsh);
 
 #endif
