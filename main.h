@@ -210,5 +210,10 @@ char *rep_var(char *inputs, datashel *dtsh);
 
 /* readlin */
 char *readlin(int *i_eof);
+/* main.c */
+void frees_data(datashel *dtsh);
+void sets_data(datashel *dtsh, char **agv);
+int main(int ac, char **agv);
+
 
 #endif
