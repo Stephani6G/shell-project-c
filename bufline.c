@@ -19,7 +19,7 @@ void buf_line(char **lineptr, size_t *n, char *buffer, size_t j)
 	}
 	else
 	{
-		_str_cpy(*lineptr, buffer);
+		_str_spn(*lineptr, buffer);
 		free(buffer);
 	}
 }
