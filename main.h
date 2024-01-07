@@ -221,5 +221,7 @@ void get_ssigint(int sign);
 /* bufline */
 void buf_line(char **lineptr, size_t *n, char *buffer, size_t j);
 ssize_t gets_line(char **lineptr, size_t *n, FILE *stream);
+/* help.c */
+int get_help(datashel *dtsh);
 
 #endif
