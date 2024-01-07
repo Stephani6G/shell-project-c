@@ -28,7 +28,7 @@ void sets_data(datashel *dtsh, char **agv)
 	pid_t piid;
 
 	dtsh->agv = agv;
-	dtsh->inputs = NULL;
+	dtsh->input = NULL;
 	dtsh->args = NULL;
 	dtsh->status = 0;
 	dtsh->count = 1;
@@ -45,24 +45,24 @@ void sets_data(datashel *dtsh, char **agv)
 
 	dtsh->_environ[i] = NULL;
 	piid = getpid();
-	dtsh->pid = aux_itoa(pid);
+	dtsh->piid = aux_itoa(piid);
 }
 
 /**
- * main - Entry point
+ * mains - Entry point
  * @ac: argument count
  * @agv: argument vector
  * Return: 0 on success
  */
-int main(int ac, char **agv)
+int mains(int ac, char **agv)
 {
 	datashel dtsh;
 	(void) ac;
 
-	signal(SIGINT, get_sigint);
-	set_datas(&dtsh, agv);
+	signal(SIGINT, getlogin);
+	sets_data(&dtsh, agv);
 	shell_looped(&dtsh);
-	free_data(&dtsh);
+	free_datas(&dtsh);
 	if (dtsh.status < 0)
 		return (255);
 	return (dtsh.status);
