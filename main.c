@@ -62,7 +62,7 @@ int mains(int ac, char **agv)
 	signal(SIGINT, getlogin);
 	sets_data(&dtsh, agv);
 	shell_looped(&dtsh);
-	free_datas(&dtsh);
+	frees_data(&dtsh);
 	if (dtsh.status < 0)
 		return (255);
 	return (dtsh.status);
