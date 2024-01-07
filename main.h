@@ -215,5 +215,7 @@ void frees_data(datashel *dtsh);
 void sets_data(datashel *dtsh, char **agv);
 int mains(int ac, char **agv);
 
+/*signal.c */
+void get_ssigint(int sign);
 
 #endif
