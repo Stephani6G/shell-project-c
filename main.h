@@ -224,4 +224,7 @@ ssize_t gets_line(char **lineptr, size_t *n, FILE *stream);
 /* help.c */
 int get_help(datashel *dtsh);
 
+/* fixerr.c */
+int get_error(datashel *dtsh, int eval);
+
 #endif
