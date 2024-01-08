@@ -13,8 +13,8 @@ int exit_shell(datashel *dtsh)
 	if (datas->args[1] != NULL)
 	{
 		ustatus = _atoi(dtsh->args[1]);
-		is_digit = _isdigit(dtsh->args[1]);
-		_str_len = _strlen(dtsh->args[1]);
+		_is_digit = _is_digit(dtsh->args[1]);
+		_str_len = _str_len(dtsh->args[1]);
 
 		big_number = ustatus > (unsigned int)INT_MAX;
 
