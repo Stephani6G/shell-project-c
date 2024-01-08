@@ -7,7 +7,7 @@
  * @eval: error value
  * Return: error
  */
-int get_error(datashel *datash, int eval)
+int get_error(datashel *dtsh, int eval)
 {
 	char *error;
 
