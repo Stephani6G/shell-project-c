@@ -52,7 +52,7 @@ char *_getenv(const char *name, char **_environ)
  * @dtsh: relevant data
  * Return: 1 on success
  */
-int _env(data_shel *dtsh)
+int _env(datashel *dtsh)
 {
 	int i, j;
 
