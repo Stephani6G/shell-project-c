@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * execle - finds builtins and commands
+ * exec_line - finds builtins and commands
  * @dtsh: relevant data
  * Return: 1 on success
  */
-int execle(datashel *dtsh)
+int exec_line(datashel *dtsh)
 {
 	int (*builtin)(datashel *dtsh);
 
