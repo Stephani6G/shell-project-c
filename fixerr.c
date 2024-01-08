@@ -14,19 +14,19 @@ int get_error(datashel *dtsh, int eval)
 	switch (eval)
 	{
 		case -1:
-			error = error_env(dtsh);
+			error = err_env(dtsh);
 			break;
 		case 126:
-			error = error_path_126(dtsh);
+			error = path_error(dtsh);
 			break;
 		case 127:
 			error = error_not_found(dtsh);
 			break;
 		case 2:
 			if (_str_cmp("exit", dtsh->args[0]) == 0)
-				error = error_exit_shell(dtsh);
+				error = error_shell_exit_shell(dtsh);
 			else if (_str_cmp("cd", dtsh->args[0]) == 0)
-				error = error_get_cd(dtsh);
+				error = error_fetch_cd(dtsh);
 			break;
 	}
 
