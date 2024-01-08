@@ -237,5 +237,8 @@ int cmp_env_name(const char *nenv, const char *name);
 char *_getenv(const char *name, char **_environ);
 int _env(datashel *dtsh);
 
+/* en2ron.c */
+char *copy_info(char *name, char *value);
+void set_env(char *name, char *value, datashel *dtsh);
 
 #endif
