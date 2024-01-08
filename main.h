@@ -240,5 +240,9 @@ int _env(datashel *dtsh);
 /* en2ron.c */
 char *copy_info(char *name, char *value);
 void set_env(char *name, char *value, datashel *dtsh);
+/* en3rin */
+int _setenv(datashel *dtsh);
+int _unsetenv(datashel *dtsh);
+
 
 #endif
