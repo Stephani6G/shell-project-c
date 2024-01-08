@@ -235,7 +235,7 @@ int exec_line(datashel *dtsh);
 /* environ.c */
 int cmp_env_name(const char *nenv, const char *name);
 char *_getenv(const char *name, char **_environ);
-int _env(data_shel *dtsh);
+int _env(datashel *dtsh);
 
 
 #endif
