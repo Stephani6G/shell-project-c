@@ -18,7 +18,7 @@ int exit_shell(datashel *dtsh)
 
 		big_number = ustatus > (unsigned int)INT_MAX;
 
-		if (!is_digit || str_len > 10 || big_number)
+		if (!_is_digit || str_len > 10 || big_number)
 		{
 			get_error(dtsh, 2);
 			dtsh->status = 2;
