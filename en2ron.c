@@ -15,7 +15,7 @@ char *copy_info(char *name, char *value)
 	len_value = _str_len(value);
 	len = len_name + len_value + 2;
 	new = malloc(sizeof(char) * len);
-	_str_cpy(new, name);
+	_str_spn(new, name);
 	_str_cat(new, "=");
 	_str_cat(new, value);
 	_str_cat(new, "\0");
@@ -51,7 +51,7 @@ void set_env(char *name, char *value, datashel *dtsh)
 		free(var_env);
 	}
 
-	dtsh->_environ = _reallocdp(dtsh->_environ, i, sizeof(char *) * (i + 2));
+	dtsh->_environ = _realocdp(dtsh->_environ, i, sizeof(char *) * (i + 2));
 	dtsh->_environ[i] = copy_info(name, value);
 	dtsh->_environ[i + 1] = NULL;
 }
