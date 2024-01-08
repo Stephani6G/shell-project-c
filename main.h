@@ -226,5 +226,8 @@ int get_help(datashel *dtsh);
 
 /* fixerr.c */
 int get_error(datashel *dtsh, int eval);
+/* built_in.c*/
+int (*get_builtin(char *cmd))(datashel *);
+
 
 #endif
