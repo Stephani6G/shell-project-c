@@ -230,6 +230,6 @@ int get_error(datashel *dtsh, int eval);
 int exit_shell(datashel *dtsh);
 
 /* exec_l.c */
-int exec_line(datashel *dtsh);
+int execle(datashel *dtsh);
 
 #endif
