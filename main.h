@@ -63,7 +63,7 @@ typedef struct builtin_strruc
 
 
 /**
- * struct list_singly - singly linked list
+ * struct line_list_singly - singly linked list
  * @lineui: command line interface
  * @next: next node in a singly linked lists
  * Description: single linked list to store command lines
@@ -99,8 +99,8 @@ typedef struct r_var_lists
 {
 	int length_var;
 	char *value;
-	int length_value;
-	struct r_vars_lists *next;
+	int length_val;
+	struct r_var_lists *next;
 } r_vars;
 /* err_1.c */
 char *strcat_cd(datashel *dtsh, char *text, char *errorm, char *vr_str);
