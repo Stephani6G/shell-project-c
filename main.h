@@ -250,4 +250,19 @@ void execute_command(char *args[]);
 void parse_input(char *input, char *args[]);
 int main(void);
 
+
+typedef struct datas {
+	char **agv;
+	char *input;
+	char **args;
+	int status;
+	int count;
+	char **_environ;
+	char *piid;
+} datashel;
+
+void execute_command(datashel *dtsh);
+void parse_input(datashel *dtsh);
+int main(void);
+
 #endif
