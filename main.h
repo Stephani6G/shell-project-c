@@ -245,4 +245,9 @@ int _setenv(datashel *dtsh);
 int _unsetenv(datashel *dtsh);
 
 
+/* parse.c */
+void execute_command(char *args[]);
+void parse_input(char *input, char *args[]);
+int main(void);
+
 #endif
