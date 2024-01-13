@@ -12,7 +12,7 @@ int exec_line(datashel *dtsh)
 	if (dtsh->args[0] == NULL)
 		return (1);
 
-	builtin = builtin(dtsh->args[0]);
+	builtin = builtin((char *)dtsh->args[0]);
 
 	if (builtin != NULL)
 		return (builtin(dtsh));
